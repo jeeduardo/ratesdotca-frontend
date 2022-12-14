@@ -1,8 +1,12 @@
+/**
+ * Javascript for login, and burger menu behaviors/CSS
+ *
+ * @author Josephson Eduardo <josephson.eduardo@gmail.com>
+ */
 document.addEventListener("DOMContentLoaded", function() {
 
   // Login onclick event function
   document.getElementById('login-link').addEventListener('click', function() {
-
     // unhide burger menu links that should show only when "Login" is clicked
     var i, showOnLoginElements = document.getElementsByClassName('show-on-login');
     for (i = 0; i < showOnLoginElements.length; i++) {
@@ -51,5 +55,15 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('hamburger-menu').addEventListener('click', function() {
     document.getElementById('burger-menu').classList.remove('hidden');
   });
+
+  // Pagination page links (CSS only)
+  var pagerPageLinks = document.querySelectorAll('.pager-page .page-link');
+  for (var i = 0; i < pagerPageLinks.length; i++) {
+    pagerPageLinks[i].addEventListener('click', function(e) {
+      document.querySelector('.pager-page.current').classList.remove('current');
+      e.target.parentNode.parentNode.classList.add('current');
+      e.preventDefault();
+    });
+  }
 
 });

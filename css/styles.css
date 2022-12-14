@@ -5,6 +5,9 @@ body {
 h1, h2 {
     font-weight: normal;
 }
+a {
+    text-decoration: none;
+}
 a:visited {
     color: inherit;
 }
@@ -180,6 +183,7 @@ a:visited {
     display: inline-block;
     margin: 12px 1px;
     padding: 6px 10px;
+    cursor: pointer;
 }
 .footer .main-tag {
     background: #000;
@@ -209,6 +213,9 @@ a:visited {
 }
 .border-bottom {
     border-bottom: 1px solid lightgrey;
+}
+.a-hover:hover {
+    text-decoration: underline;
 }
 
 /* CSS for non-mobile width */
