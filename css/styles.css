@@ -243,15 +243,6 @@ a:visited {
         width: 95%;
         margin: auto;
     }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .services .section-services {
-        flex: 50%;
-    }
-}
-
-@media (min-width: 1024px) {
     .services .section-services {
         flex: 25%;
     }
