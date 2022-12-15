@@ -6,7 +6,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   // Login onclick event function
-  document.getElementById('login-link').addEventListener('click', function() {
+  document.getElementById('login-link').addEventListener('click', function(e) {
+    e.preventDefault();
     // unhide burger menu links that should show only when "Login" is clicked
     var i, showOnLoginElements = document.getElementsByClassName('show-on-login');
     for (i = 0; i < showOnLoginElements.length; i++) {
